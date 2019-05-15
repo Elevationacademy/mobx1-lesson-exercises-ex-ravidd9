@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react'
+import DevTools from 'mobx-react-devtools';
 import './App.css';
 import Item from './components/Item';
 
@@ -18,9 +19,10 @@ class App extends Component {
     let store = this.props.store
     return (
       <div className="App">
+      < DevTools />
         <input onChange = {this.handleChange}/>
         <button onClick = {this.addItem}>Add</button>
-        {store.list.map(i => <Item item={i}/>)}
+        {store.list.map(i => <Item item={i} store={store}/>)}
       </div>
     );
   }
