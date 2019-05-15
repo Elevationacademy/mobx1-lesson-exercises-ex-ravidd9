@@ -4,8 +4,8 @@ import { Item } from './Item'
 
 export class ShoppingList {
     // your code here
-    list = [];
-    length;
+    @observable list = [];
+    @observable length;
     checkItem = () => {
         // your code here
     }
