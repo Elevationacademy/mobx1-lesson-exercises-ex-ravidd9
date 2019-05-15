@@ -13,13 +13,10 @@ class Item extends Component {
         //your code here
       }
     render() {
+      let item = this.props.item
         return (
             <div className = "">
-      {/*   your code here
-            each item should be in an input checkbox
-            it should display the item name and location
-            it should have both an edit button and a delete button
-      */} 
+                <span>{item.name}</span>
             </div>)
     }
 }
